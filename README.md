@@ -7,7 +7,8 @@ To Use
 -------
 1. Copy the module in your Modules directory
 2. Include it in your application's bootstrap: 'kohana-google-shorten' => MODPATH.'kohana-google-shorten'
-3. Checkout sample codes below:
+3. Optional step: get your API key, [read here](https://code.google.com/apis/console)
+4. Checkout sample codes below:
 
 Sample Code
 ------------
@@ -17,19 +18,19 @@ Sample Code
 
 ** Shorten URLs **
 
-		$key = '<your API key>'; // optional, [read here](https://code.google.com/apis/console)
+		$key = ''; // your API key, optional
 		$longUrl = 'http://www.mongeslani.com';
 		$shortUrl = shorten::shorten($longUrl, $key);
 
 ** Expand shortened URLs **
 
-		$key = '<your API key>'; // optional, [read here](https://code.google.com/apis/console)
+		$key = ''; // your API key, optional
 		$shortUrl = 'http://goo.gl/N4mCb';
 		$longUrl = shorten::expand($shortUrl, $key);
 
 ** Get Analytics for the shortened URLs **
 
-		$key = '<your API key>'; // optional, [read here](https://code.google.com/apis/console)
+		$key = ''; // your API key, optional
 		$shortUrl = 'http://goo.gl/N4mCb';
 		$longUrl = shorten::expand($shortUrl, $key, TRUE); // same as expanding but with additional parameter
 
